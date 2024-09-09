@@ -1,20 +1,7 @@
 from django.shortcuts import render, redirect
-from django import forms
-from .models import *
+from .forms import MessageForm, JoinWaitlistForm
 
-# Create your views here.
-class MessageForm(forms.ModelForm):
-    class Meta:
-        model = Messages
-        fields = '__all__'
-
-
-class JoinWaitlistForm(forms.ModelForm):
-    class Meta:
-        model = Waitlist
-        fields = '__all__'
-
-# views 
+# Create your views here. 
 def index(request):
     return render(request, 'index.html')
 

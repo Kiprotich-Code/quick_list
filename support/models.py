@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Messages(models.Model):
+class MessageList(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()
@@ -10,7 +10,7 @@ class Messages(models.Model):
         return f'Message from {self.email}'
     
 
-class Waitlist(models.Model):
+class WaitList(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
 
